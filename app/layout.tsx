@@ -4,6 +4,7 @@ import "./globals.css";
 // Supports weights 200-800
 import '@fontsource-variable/manrope';
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

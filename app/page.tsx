@@ -6,6 +6,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export default function Home() {
   return (
@@ -109,6 +115,130 @@ export default function Home() {
           <Button size="lg">Cotizar equipos</Button>
         </div>
       </section>
+      <section className="flex flex-col items-center gap-6 p-8 bg-accent">
+        <h2 className="text-2xl font-semibold text-center">Testimonios de nuestros clientes</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 max-w-6xl w-full mx-auto">
+          <article className="flex flex-col gap-2 border bg-background rounded-lg p-5">
+            <p className="text-base font-medium">Semcon nos ayudo a mejorar la eficiencia de nuestro proceso productivo, además de ofrecer un servicio de calidad y un equipo de profesionales que nos han acompañado en nuestro crecimiento.	</p>
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm">Juan Pérez</p>
+                <p className="text-xs text-muted-foreground">CEO de la empresa</p>
+              </div>
+              <div className="size-8 rounded-full bg-accent border">
+              </div>
+            </div>
+          </article>
+          <article className="flex flex-col gap-2 border bg-background rounded-lg p-5">
+            <p className="text-base font-medium">Semcon nos ayudo a mejorar la eficiencia de nuestro proceso productivo, además de ofrecer un servicio de calidad y un equipo de profesionales que nos han acompañado en nuestro crecimiento.	</p>
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm">Juan Pérez</p>
+                <p className="text-xs text-muted-foreground">CEO de la empresa</p>
+              </div>
+              <div className="size-8 rounded-full bg-accent border">
+              </div>
+            </div>
+          </article>
+          <article className="flex flex-col gap-2 border bg-background rounded-lg p-5">
+            <p className="text-base font-medium">Semcon nos ayudo a mejorar la eficiencia de nuestro proceso productivo, además de ofrecer un servicio de calidad y un equipo de profesionales que nos han acompañado en nuestro crecimiento.	</p>
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm">Juan Pérez</p>
+                <p className="text-xs text-muted-foreground">CEO de la empresa</p>
+              </div>
+              <div className="size-8 rounded-full bg-accent border">
+              </div>
+            </div>
+          </article>
+          <article className="flex flex-col gap-2 border bg-background rounded-lg p-5">
+            <p className="text-base font-medium">Semcon nos ayudo a mejorar la eficiencia de nuestro proceso productivo, además de ofrecer un servicio de calidad y un equipo de profesionales que nos han acompañado en nuestro crecimiento.	</p>
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm">Juan Pérez</p>
+                <p className="text-xs text-muted-foreground">CEO de la empresa</p>
+              </div>
+              <div className="size-8 rounded-full bg-accent border">
+              </div>
+            </div>
+          </article>
+          <article className="flex flex-col gap-2 border bg-background rounded-lg p-5">
+            <p className="text-base font-medium">Semcon nos ayudo a mejorar la eficiencia de nuestro proceso productivo, además de ofrecer un servicio de calidad y un equipo de profesionales que nos han acompañado en nuestro crecimiento.	</p>
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm">Juan Pérez</p>
+                <p className="text-xs text-muted-foreground">CEO de la empresa</p>
+              </div>
+              <div className="size-8 rounded-full bg-accent border">
+              </div>
+            </div>
+          </article>
+          <article className="flex flex-col gap-2 border bg-background rounded-lg p-5">
+            <p className="text-base font-medium">Semcon nos ayudo a mejorar la eficiencia de nuestro proceso productivo, además de ofrecer un servicio de calidad y un equipo de profesionales que nos han acompañado en nuestro crecimiento.	</p>
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm">Juan Pérez</p>
+                <p className="text-xs text-muted-foreground">CEO de la empresa</p>
+              </div>
+              <div className="size-8 rounded-full bg-accent border">
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section className="flex flex-col items-center gap-6 p-8">
+        <h2 className="text-2xl font-semibold">Preguntas frecuentes</h2>
+        <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto p-4">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>¿Qué servicios ofrecen?</AccordionTrigger>
+            <AccordionContent>
+              Ofrecemos una amplia gama de servicios, desde la instalación y mantenimiento de equipos hasta la capacitación de personal.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>¿Cuáles son los horarios de atención?</AccordionTrigger>
+            <AccordionContent>
+              Los horarios de atención son de lunes a viernes de 8:00 a 18:00.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>¿Qué tipo de equipos ofrecen?</AccordionTrigger>
+            <AccordionContent>
+              Ofrecemos una amplia gama de equipos, desde medidores de flujo hasta controladores de proceso.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>¿Qué tipo de ventas manejan?</AccordionTrigger>
+            <AccordionContent>
+              Manejamos ventas de equipos y repuestos para la industria papelera, desde importación hasta venta directa.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger>¿Cual es la capacitación de nuestros profesionales?</AccordionTrigger>
+            <AccordionContent>
+              Nuestros profesionales tienen una amplia experiencia en la industria papelera y son capacitados para ofrecer un servicio de calidad.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </section>
+      <footer className="flex flex-col gap-6 p-8 bg-primary">
+        <div className="flex justify-between gap-2 max-w-6xl w-full mx-auto p-4 text-primary-foreground">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-xl italic text-primary-foreground font-extrabold">SEMCON</h2>
+            <p className="text-sm">Servicios especializados de medición y control</p>
+          </div>
+          <div className="flex flex-col gap-2 text-sm">
+            <p>Teléfono: 3178564920</p>
+            <p>Email: info@semcon.com</p>
+            <p>WhatsApp: 3178564920</p>
+            <p>Dirección: Carrera 123 # 45-67</p>
+          </div>
+        </div>
+        <div className="w-full max-w-6xl mx-auto border-b-1 pb-1 border-b-primary-foreground" />
+        <div className="text-center text-sm text-primary-foreground">
+          <p>&copy; 2025 SEMCON. Servicios especializados de medición y control.</p>
+        </div>
+      </footer>
     </main>
   );
 }

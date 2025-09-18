@@ -16,7 +16,7 @@ import {
 export default function Home() {
   return (
     <main className="flex flex-col gap-4 min-h-svh">
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 pt-16 sm:gap-16 md:gap-24 min-h-svh max-w-6xl mx-auto">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 pt-20 sm:gap-16 md:gap-24 min-h-svh max-w-6xl mx-auto">
         <article className="flex flex-col h-fit w-fit m-auto gap-6">
           <h1 className="text-4xl font-bold max-w-lg">Soluciones de <span className="text-primary">automatización</span> y <span className="text-primary">control</span> para la industria papelera</h1>
           <p className="text-sm lg:text-base max-w-lg text-muted-foreground">En SEMCON integramos ingeniería, servicios técnicos especializados y venta de equipos con respaldo internacional. Más de dos décadas acompañando a las principales empresas papeleras de Colombia en su camino hacia la eficiencia, confiabilidad y sostenibilidad.</p>
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
       <section className="flex flex-col items-center gap-6 p-8 bg-accent">
         <h2 className="text-2xl font-semibold text-center">Testimonios de nuestros clientes</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 max-w-6xl w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-6xl w-full mx-auto">
           <article className="flex flex-col gap-2 border bg-background rounded-lg p-5">
             <p className="text-base font-medium">Semcon nos ayudo a mejorar la eficiencia de nuestro proceso productivo, además de ofrecer un servicio de calidad y un equipo de profesionales que nos han acompañado en nuestro crecimiento.	</p>
             <div className="flex items-center justify-between gap-4">

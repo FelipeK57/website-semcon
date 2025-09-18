@@ -222,7 +222,7 @@ export default function Home() {
         </Accordion>
       </section>
       <footer className="flex flex-col gap-6 p-8 bg-primary">
-        <div className="flex justify-between gap-2 max-w-6xl w-full mx-auto p-4 text-primary-foreground">
+        <div className="flex flex-col md:flex-row justify-between gap-8 max-w-6xl w-full mx-auto p-4 text-primary-foreground">
           <div className="flex flex-col gap-2">
             <h2 className="text-xl italic text-primary-foreground font-extrabold">SEMCON</h2>
             <p className="text-sm">Servicios especializados de medición y control</p>

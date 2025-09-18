@@ -15,7 +15,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-4 min-h-svh">
+    <main className="flex flex-col min-h-svh">
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 pt-20 sm:gap-16 md:gap-24 min-h-svh max-w-6xl mx-auto">
         <article className="flex flex-col h-fit w-fit m-auto gap-6">
           <h1 className="text-4xl font-bold max-w-lg">Soluciones de <span className="text-primary">automatización</span> y <span className="text-primary">control</span> para la industria papelera</h1>
@@ -186,7 +186,7 @@ export default function Home() {
           </article>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-6 p-8">
+      <section className="flex flex-col items-center gap-6 p-8 bg-background">
         <h2 className="text-2xl font-semibold">Preguntas frecuentes</h2>
         <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto p-4">
           <AccordionItem value="item-1">
@@ -220,6 +220,11 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+      </section>
+      <section className="flex flex-col gap-4 px-8 py-24 items-center justify-center bg-accent">
+        <h2 className="text-2xl font-bold text-accent-foreground text-center">¿Listo para optimizar tu proceso?</h2>
+        <p className="text-center text-base max-w-3xl text-accent-foreground">Contáctanos hoy mismo y descubre cómo nuestras soluciones de automatización y control pueden transformar tu industria papelera. Nuestro equipo de expertos está listo para acompañarte.</p>
+        <Button size="lg">Contactar</Button>
       </section>
     </main>
   );

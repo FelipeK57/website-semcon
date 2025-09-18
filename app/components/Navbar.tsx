@@ -54,7 +54,7 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-30 bg-accent border-b">
+        <nav className="fixed top-0 left-0 right-0 z-30 bg-background border-b">
             <div className="flex justify-between items-center p-4 max-w-6xl w-full mx-auto">
                 <h1 className="text-xl italic text-primary font-extrabold">SEMCON</h1>
                 <div className="hidden lg:flex gap-8 text-sm">

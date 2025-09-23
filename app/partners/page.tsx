@@ -15,7 +15,7 @@ export default function Representadas() {
                     <p className="text-sm"><span className="font-semibold">Nuestro rol:</span> Representante exclusivo de ventas y servicio en Colombia, Ecuador, Perú y Venezuela, brindando soporte local, instalación, capacitación y mantenimiento certificado.</p>
                 </article>
                 <article className="flex flex-col gap-4">
-                    <img src="/ametek.svg" alt="Ametek" className="h-8 md:h-6 w-fit mr-auto" />
+                    <img src="/ametek.svg" alt="Ametek" className="h-8 md:h-6 w-fit" />
                     <p>Proveemos soluciones escalables de inspección y monitoreo de procesos papelero:</p>
                     <ul className="list-disc list-inside ml-4 text-muted-foreground">
                         <li>SmartView: Web inspection Systems</li>
@@ -32,8 +32,7 @@ export default function Representadas() {
                     <p className="max-w-lg">Como distribuidor oficial de equipos, partes y soporte técnico para Colombia, Ecuador y Venezuela, ponemos a disposición de la industria papelera soluciones de clase mundial del grupo ABB. Nuestro compromiso es ofrecer productos originales, servicio local y asesoría técnica especializada, respaldados por años de experiencia.</p>
                 </article>
                 <article className="flex flex-col gap-4">
-                    <Image src="/kpm.png" alt="ABB" width={200} height={100} className="h-18 w-fit md:h-14"/>
-                    <p>Linea de productos:</p>
+                    <p>Linea de productos KPM:</p>
                     <ul className="list-disc list-inside ml-4 text-muted-foreground">
                         <li>Transmisores de consistencia: tipo paleta (KC/3), rotativo (KC/5), microondas (KC/7) y óptico (KC/9).</li>
                         <li>Detectores de rotura: modelo KB2, reconocido por su alta confiabilidad en máquinas de papel.</li>
@@ -42,8 +41,7 @@ export default function Representadas() {
                     <p className="text-sm"><span className="font-semibold">Cobertura:</span> Distribuidor autorizado para Colombia y Ecuador.</p>
                 </article>
                 <article className="flex flex-col gap-4">
-                    <Image src="/l&w.png" alt="L&W" width={200} height={100} className="h-14 w-fit md:h-12"/>
-                    <p>Linea de productos:</p>
+                    <p>Linea de productos Lorentzen & Wettre:</p>
                     <ul className="list-disc list-inside ml-4 text-muted-foreground">
                         <li>Equipos para laboratorio de papel.</li>
                         <li>Equipos para laboratorio de pulpa.</li>

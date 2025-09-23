@@ -12,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -25,8 +26,8 @@ export default function Home() {
             <Button size="lg" variant="outline">Cotizar equipos</Button>
           </div>
         </article>
-        <div className="bg-accent rounded-lg w-full border aspect-square m-auto">
-        </div>
+        <Image src="/hero.png" alt="Hero" className="bg-accent object-cover rounded-lg w-full border aspect-square m-auto" width={1000} height={1000}>
+        </Image>
       </section>
       <section className="flex flex-col gap-4 px-8 py-24 items-center justify-center bg-primary">
         <h2 className="text-2xl font-bold text-primary-foreground">Sobre nosotros</h2>

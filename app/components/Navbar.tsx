@@ -40,8 +40,8 @@ export default function Navbar() {
             href: "/productos"
         },
         {
-            label: "Representadas",
-            href: "/representadas"
+            label: "Partners",
+            href: "/partners"
         },
         {
             label: "Clientes",

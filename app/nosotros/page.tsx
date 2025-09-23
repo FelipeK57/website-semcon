@@ -7,7 +7,7 @@ export default function Nosotros() {
         <p className="text-lg font-semibold">Nuestra historia</p>
         <p className="text-muted-foreground">Somos una empresa colombiana con más de 23 años de experiencia en soluciones de automatización y medición. Contamos con un equipo multidisciplinario de ingenieros que entiende los retos de la industria papelera y ofrece acompañamiento integral, desde la consultoría técnica hasta el suministro de equipos especializados.</p>
       </div>
-      <div>
+      <div className="flex flex-col gap-2">
         <p className="text-lg font-semibold">Nuestra misión</p>
         <p className="text-muted-foreground">Nuestra misión es ofrecer soluciones de automatización y medición para la industria papelera, garantizando la eficiencia y confiabilidad de los procesos productivos.</p>
       </div>

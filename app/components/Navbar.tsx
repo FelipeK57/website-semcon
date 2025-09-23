@@ -58,7 +58,7 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-30 bg-background border-b">
             <div className="flex justify-between items-center p-4 max-w-6xl w-full mx-auto">
                 {/* <h1 className="text-xl italic text-primary font-extrabold">SEMCON</h1> */}
-                <Image src="/Logo.png" alt="SEMCON" width={100} height={100} />
+                <Image src="/Logo.png" alt="SEMCON" width={100} height={20} />
                 <div className="hidden lg:flex gap-8 text-sm">
                     {routes.map((route) => (
                         <Link key={route.href} href={route.href} className="hover:text-primary transition-colors">{route.label}</Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
                                 className="absolute flex flex-col gap-8 p-6 top-0 right-0 bg-background h-svh z-50 w-4/5 sm:w-3/5 md:w-2/5"
                             >
                                 <div className="flex justify-between items-center">
-                                    <Image src="/Logo.png" alt="SEMCON" width={100} height={100} />
+                                    <Image src="/Logo.png" alt="SEMCON" width={100} height={20} />
                                     <Button variant="ghost" className="grid place-content-center size-6" onClick={() => setIsOpen(false)}>
                                         <X className="size-6 text-muted-foreground" />
                                     </Button>

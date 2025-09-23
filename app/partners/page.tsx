@@ -42,7 +42,7 @@ export default function Representadas() {
                     <p className="text-sm"><span className="font-semibold">Cobertura:</span> Distribuidor autorizado para Colombia y Ecuador.</p>
                 </article>
                 <article className="flex flex-col gap-4">
-                    <Image src="/l&w.png" alt="L&W" width={200} height={100} className="h-12 w-fit md:h-10"/>
+                    <Image src="/l&w.png" alt="L&W" width={200} height={100} className="h-14 w-fit md:h-12"/>
                     <p>Linea de productos:</p>
                     <ul className="list-disc list-inside ml-4 text-muted-foreground">
                         <li>Equipos para laboratorio de papel.</li>

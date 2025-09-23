@@ -15,7 +15,7 @@ export default function Representadas() {
                     <p className="text-sm"><span className="font-semibold">Nuestro rol:</span> Representante exclusivo de ventas y servicio en Colombia, Ecuador, Perú y Venezuela, brindando soporte local, instalación, capacitación y mantenimiento certificado.</p>
                 </article>
                 <article className="flex flex-col gap-4">
-                    <img src="/ametek.svg" alt="Ametek" className="h-8 md:h-6 w-fit" />
+                    <img src="/ametek.svg" alt="Ametek" className="h-8 md:h-6 w-fit -translate-x-4 md:translate-x-0" />
                     <p>Proveemos soluciones escalables de inspección y monitoreo de procesos papelero:</p>
                     <ul className="list-disc list-inside ml-4 text-muted-foreground">
                         <li>SmartView: Web inspection Systems</li>

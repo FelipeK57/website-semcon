@@ -5,9 +5,9 @@ export default function Representadas() {
             <h3 className="text-2xl font-bold">Representante exclusivo de:</h3>
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <article className="flex flex-col gap-4">
-                    <Image src="/voith.svg" alt="Voith" width={200} height={200} className="h-6 w-fit" />
+                    <img src="/voith.svg" alt="Voith" className="h-8 md:h-6 w-fit" />
                     <p> Ofrecemos soluciones completas de automatización para máquinas papeleras y procesos relacionados, incluyendo:</p>
-                    <ul className="list-disc list-inside ml-4 text-muted-foreground">
+                    <ul className="list-disc list-inside ml-4">
                         <li>QCS, DCS, Actuadores, CD Controles</li>
                         <li>Sistemas de Información</li>
                         <li>Instrumentación y otros equipos especializados</li>
@@ -15,7 +15,7 @@ export default function Representadas() {
                     <p className="text-sm"><span className="font-semibold">Nuestro rol:</span> Representante exclusivo de ventas y servicio en Colombia, Ecuador, Perú y Venezuela, brindando soporte local, instalación, capacitación y mantenimiento certificado.</p>
                 </article>
                 <article className="flex flex-col gap-4">
-                    <Image src="/ametek.png" alt="Ametek" width={200} height={200} className="h-6 w-fit" />
+                    <img src="/ametek.svg" alt="Ametek" className="w-fit h-8 md:h-6" />
                     <p>Proveemos soluciones escalables de inspección y monitoreo de procesos papelero:</p>
                     <ul className="list-disc list-inside ml-4 text-muted-foreground">
                         <li>SmartView: Web inspection Systems</li>
@@ -28,7 +28,7 @@ export default function Representadas() {
             <h3 className="text-2xl font-bold">Distribuidor autorizado de:</h3>
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <article className="flex flex-col gap-4 md:col-span-2">
-                    <Image src="/abb-logo.svg" alt="ABB" width={200} height={200} className="h-6 w-fit" />
+                    <img src="/abb-logo.svg" alt="ABB" className="h-8 md:h-6 w-fit" />
                     <p className="max-w-lg">Como distribuidor oficial de equipos, partes y soporte técnico para Colombia, Ecuador y Venezuela, ponemos a disposición de la industria papelera soluciones de clase mundial del grupo ABB. Nuestro compromiso es ofrecer productos originales, servicio local y asesoría técnica especializada, respaldados por años de experiencia.</p>
                 </article>
                 <article className="flex flex-col gap-4">

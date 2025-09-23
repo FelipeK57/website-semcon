@@ -1,6 +1,6 @@
 export default function Nosotros() {
   return (
-    <main className="flex flex-col gap-6 max-w-3xl mx-auto p-4 py-28">
+    <main className="flex flex-col gap-8 max-w-3xl mx-auto p-4 py-28">
       <h3 className="text-2xl font-bold">Sobre nosotros</h3>
       <div className="w-full h-64 sm:h-96 bg-accent border rounded-lg"></div>
       <div className="flex flex-col gap-2">

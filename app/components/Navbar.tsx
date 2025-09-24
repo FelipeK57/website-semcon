@@ -6,9 +6,11 @@ import { Menu, ShoppingCart, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import useQuoteStore from "@/lib/store";
 
 export default function Navbar() {
 
+    const { shoppingCart } = useQuoteStore();
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -63,14 +65,19 @@ export default function Navbar() {
                     {routes.map((route) => (
                         <Link key={route.href} href={route.href} className="hover:text-primary transition-colors">{route.label}</Link>
                     ))}
-                    <div className="relative">
-                        <Button>
+                </div>
+                <div className="relative hidden lg:block">
+                    <Link href="/cotizacion">
+                        <Button size="sm" className="cursor-pointer text-sm">
                             <ShoppingCart />
                             Cotización
                         </Button>
-                        <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs z-10">1</span>
+                    </Link>
+                    {shoppingCart.length > 0 && <>
+                        <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs z-10">{shoppingCart.length}</span>
                         <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs animate-ping"></span>
-                    </div>
+                    </>
+                    }
                 </div>
                 <div className="lg:hidden">
                     <Button className="grid place-content-center size-6" variant="ghost" onClick={() => setIsOpen(!isOpen)}>
@@ -99,6 +106,19 @@ export default function Navbar() {
                                 {routes.map((route) => (
                                     <Link onClick={() => setIsOpen(false)} key={route.href} href={route.href} className="text-lg hover:text-primary transition-colors">{route.label}</Link>
                                 ))}
+                                <div className="relative w-fit">
+                                    <Link href="/cotizacion" onClick={() => setIsOpen(false)}>
+                                        <Button size="lg">
+                                            <ShoppingCart />
+                                            Cotización
+                                        </Button>
+                                    </Link>
+                                    {shoppingCart.length > 0 && <>
+                                        <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs z-10">{shoppingCart.length}</span>
+                                        <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs animate-ping"></span>
+                                    </>
+                                    }
+                                </div>
                             </motion.div>
                         </>
                     )}

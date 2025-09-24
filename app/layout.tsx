@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
+import CardButton from "@/components/CardButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,19 +37,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <div className="fixed right-4 bottom-4 z-10 lg:hidden">
-          <Button size="lg">
-            <ShoppingCart />
-            Cotización
-          </Button>
-          <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-5 text-xs z-10">1</span>
-          <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-5 text-xs animate-ping"></span>
-        </div>
-        {/* <Button size="lg" className="fixed right-4 bottom-4 z-10 lg:hidden">
-          <ShoppingCart />
-          Cotización
-          <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs z-10">1</span>
-        </Button> */}
+        <CardButton />
       </body>
     </html>
   );

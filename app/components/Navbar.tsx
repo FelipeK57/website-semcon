@@ -63,12 +63,14 @@ export default function Navbar() {
                     {routes.map((route) => (
                         <Link key={route.href} href={route.href} className="hover:text-primary transition-colors">{route.label}</Link>
                     ))}
-                    <Button size="lg" className="relative">
-                        <ShoppingCart />
-                        Cotización
-                        <span className="absolute grid place-content-center -top-1 -right-1 bg-amber-400 text-primary-foreground rounded-full size-4 text-xs z-10 animate-ping"></span>
-                        <span className="absolute grid place-content-center -top-1 -right-1 bg-amber-200 text-primary-foreground rounded-full size-4 text-xs z-10"></span>
-                    </Button>
+                    <div className="relative">
+                        <Button>
+                            <ShoppingCart />
+                            Cotización
+                        </Button>
+                        <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs z-10">1</span>
+                        <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs animate-ping"></span>
+                    </div>
                 </div>
                 <div className="lg:hidden">
                     <Button className="grid place-content-center size-6" variant="ghost" onClick={() => setIsOpen(!isOpen)}>

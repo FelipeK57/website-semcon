@@ -36,12 +36,19 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <Button size="lg" variant="outline" className="fixed right-3 bottom-3 z-10 lg:hidden">
+        <div className="fixed right-4 bottom-4 z-10 lg:hidden">
+          <Button size="lg">
+            <ShoppingCart />
+            Cotización
+          </Button>
+          <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-5 text-xs z-10">1</span>
+          <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-5 text-xs animate-ping"></span>
+        </div>
+        {/* <Button size="lg" className="fixed right-4 bottom-4 z-10 lg:hidden">
           <ShoppingCart />
           Cotización
-          <span className="absolute grid place-content-center -top-1 -right-1 bg-blue-600 text-primary-foreground rounded-full size-4 text-xs z-10 animate-ping"></span>
-          <span className="absolute grid place-content-center -top-1 -right-1 bg-blue-800 text-primary-foreground rounded-full size-4 text-xs z-10"></span>
-        </Button>
+          <span className="absolute grid place-content-center -top-1 -right-1 bg-destructive text-primary-foreground rounded-full size-4 text-xs z-10">1</span>
+        </Button> */}
       </body>
     </html>
   );

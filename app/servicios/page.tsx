@@ -4,9 +4,9 @@ import { Award, Clock, Phone, Settings, ShieldCheck, Users2, Wrench, Zap } from 
 export default function Servicios() {
     return (
         <main className="flex flex-col gap-6">
-            <section className="flex flex-col gap-6 max-w-6xl mx-auto py-28 p-4">
-                <h1 className="text-2xl font-bold">Nuestros Servicios</h1>
-                <p className="text-muted-foreground max-w-lg">
+            <section className="flex flex-col gap-6 max-w-6xl mx-auto py-28 px-4">
+                <h1 className="text-2xl font-bold text-center">Nuestros Servicios</h1>
+                <p className="text-muted-foreground max-w-lg mx-auto text-center">
                     Ofrecemos servicios integrales de mantenimiento, instalación, capacitación y soporte técnico para maximizar el rendimiento de sus equipos industriales.
                 </p>
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -60,33 +60,33 @@ export default function Servicios() {
                     </article>
                 </section>
             </section>
-            <section className="py-28 bg-accent">
-                <section className="max-w-6xl mx-auto w-full flex flex-col gap-6 p-4">
-                    <h2 className="text-2xl font-bold">¿Por qué elegirnos?</h2>
-                    <p className="text-muted-foreground max-w-lg">Ventajas que nos distinguen como el socio técnico preferido de la industria papelera.</p>
+            <section className="py-28 px-4 bg-accent">
+                <section className="max-w-6xl mx-auto w-full flex flex-col gap-6">
+                    <h2 className="text-2xl font-bold text-center">¿Por qué elegirnos?</h2>
+                    <p className="text-muted-foreground max-w-lg mx-auto text-center">Ventajas que nos distinguen como el socio técnico preferido de la industria papelera.</p>
                     <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <article className="flex gap-6">
+                        <article className="flex justify-center gap-6">
                             <Clock className="size-10 bg-primary text-primary-foreground rounded-lg p-2" />
                             <div className="flex flex-col w-2/3 gap-2">
                                 <h2 className="text-xl font-semibold">Respuesta rápida</h2>
                                 <p className="text-muted-foreground">Servicio de emergencia 24/7 con tiempos de respuesta garantizados para minimizar paradas de producción.</p>
                             </div>
                         </article>
-                        <article className="flex gap-6">
+                        <article className="flex justify-center gap-6">
                             <Award className="size-10 bg-primary text-primary-foreground rounded-lg p-2" />
                             <div className="flex flex-col w-2/3 gap-2">
                                 <h2 className="text-xl font-semibold">Personal certificado</h2>
                                 <p className="text-muted-foreground">Personal técnico certificado por los principales fabricantes con capacitación continua en nuevas tecnologías.</p>
                             </div>
                         </article>
-                        <article className="flex gap-6">
+                        <article className="flex justify-center gap-6">
                             <Zap className="size-10 bg-primary text-primary-foreground rounded-lg p-2" />
                             <div className="flex flex-col w-2/3 gap-2">
                                 <h2 className="text-xl font-semibold">Tecnología Avanzada</h2>
                                 <p className="text-muted-foreground">Herramientas de diagnóstico avanzadas y tecnología de mantenimiento predictivo para optimizar rendimiento.</p>
                             </div>
                         </article>
-                        <article className="flex gap-6">
+                        <article className="flex justify-center gap-6">
                             <Phone className="size-10 bg-primary text-primary-foreground rounded-lg p-2" />
                             <div className="flex flex-col w-2/3 gap-2">
                                 <h2 className="text-xl font-semibold">Soporte Integral</h2>
@@ -97,9 +97,9 @@ export default function Servicios() {
                     </section>
                 </section>
             </section>
-            <section className="max-w-6xl mx-auto w-full flex flex-col gap-6 py-28 p-4">
-                <h2 className="text-2xl font-bold">Nuestro proceso</h2>
-                <p className="text-muted-foreground max-w-lg">Un proceso estructurado que garantiza la calidad y eficiencia en cada proyecto.</p>
+            <section className="max-w-6xl mx-auto w-full flex flex-col gap-6 py-28 px-4">
+                <h2 className="text-2xl font-bold text-center">Nuestro proceso</h2>
+                <p className="text-muted-foreground max-w-lg mx-auto text-center">Un proceso estructurado que garantiza la calidad y eficiencia en cada proyecto.</p>
                 <section className="grid grid-cols-1 md:grid-cols-4 gap-10">
                     <article className="flex flex-col items-center gap-4">
                         <div className="grid place-content-center size-14 text-lg font-bold bg-primary text-primary-foreground rounded-full p-2">

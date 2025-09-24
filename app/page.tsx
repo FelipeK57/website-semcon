@@ -26,12 +26,13 @@ export default function Home() {
             <Button size="lg" variant="outline">Cotizar equipos</Button>
           </div>
         </article>
-        <Image src="/hero.png" alt="Hero" className="bg-accent object-cover rounded-lg w-full border aspect-square m-auto" width={1000} height={1000}>
-        </Image>
+        {/* <Image src="/hero.png" alt="Hero" className="bg-accent object-cover rounded-lg w-full border aspect-square m-auto" width={1000} height={1000}>
+        </Image> */}
+        <div className="bg-accent rounded-lg w-full border aspect-square m-auto"></div>
       </section>
       <section className="flex flex-col gap-4 px-8 py-24 items-center justify-center bg-primary">
-        <h2 className="text-2xl font-bold text-primary-foreground">Sobre nosotros</h2>
-        <p className="text-center text-base font-semibold max-w-4xl text-primary-foreground">Somos una empresa colombiana con más de 23 años de experiencia en soluciones de automatización y medición. Contamos con un equipo multidisciplinario de ingenieros que entiende los retos de la industria papelera y ofrece acompañamiento integral, desde la consultoría técnica hasta el suministro de equipos especializados.</p>
+        <h2 className="text-2xl font-bold text-primary-foreground selection:bg-primary-foreground selection:text-primary">Sobre nosotros</h2>
+        <p className="text-center text-base font-semibold max-w-4xl text-primary-foreground selection:bg-primary-foreground selection:text-primary">Somos una empresa colombiana con más de 23 años de experiencia en soluciones de automatización y medición. Contamos con un equipo multidisciplinario de ingenieros que entiende los retos de la industria papelera y ofrece acompañamiento integral, desde la consultoría técnica hasta el suministro de equipos especializados.</p>
       </section>
       <section className="flex flex-col items-center gap-6 p-8">
         <h2 className="text-2xl font-semibold">Servicios</h2>

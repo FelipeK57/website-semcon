@@ -5,6 +5,8 @@ import "./globals.css";
 import '@fontsource-variable/manrope';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +31,17 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-svh flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-svh flex flex-col relative`}
       >
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Button size="lg" variant="outline" className="fixed right-3 bottom-3 z-10 lg:hidden">
+          <ShoppingCart />
+          Cotización
+          <span className="absolute grid place-content-center -top-1 -right-1 bg-blue-600 text-primary-foreground rounded-full size-4 text-xs z-10 animate-ping"></span>
+          <span className="absolute grid place-content-center -top-1 -right-1 bg-blue-800 text-primary-foreground rounded-full size-4 text-xs z-10"></span>
+        </Button>
       </body>
     </html>
   );

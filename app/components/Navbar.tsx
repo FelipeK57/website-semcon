@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, ShoppingCart, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
@@ -59,10 +59,16 @@ export default function Navbar() {
             <div className="flex justify-between items-center p-4 max-w-6xl w-full mx-auto">
                 {/* <h1 className="text-xl italic text-primary font-extrabold">SEMCON</h1> */}
                 <Image src="/Logo.png" alt="SEMCON" width={100} height={20} />
-                <div className="hidden lg:flex gap-8 text-sm">
+                <div className="hidden lg:flex items-center gap-8 text-sm">
                     {routes.map((route) => (
                         <Link key={route.href} href={route.href} className="hover:text-primary transition-colors">{route.label}</Link>
                     ))}
+                    <Button size="lg" className="relative">
+                        <ShoppingCart />
+                        Cotización
+                        <span className="absolute grid place-content-center -top-1 -right-1 bg-amber-400 text-primary-foreground rounded-full size-4 text-xs z-10 animate-ping"></span>
+                        <span className="absolute grid place-content-center -top-1 -right-1 bg-amber-200 text-primary-foreground rounded-full size-4 text-xs z-10"></span>
+                    </Button>
                 </div>
                 <div className="lg:hidden">
                     <Button className="grid place-content-center size-6" variant="ghost" onClick={() => setIsOpen(!isOpen)}>

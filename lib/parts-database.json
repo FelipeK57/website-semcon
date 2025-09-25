@@ -1,0 +1,548 @@
+{
+  "parts": [
+    {
+      "id": "kpm-sensor-001",
+      "name": "Sensor de Presión KPM P-200",
+      "description": "Sensor de presión digital para medición precisa en procesos industriales. Rango: 0-10 bar, precisión ±0.1%",
+      "category": "Medición",
+      "image": "/images/parts/kpm-sensor-p200.jpg",
+      "brand": "KPM",
+      "price": 1250.00,
+      "stock": 15,
+      "specifications": {
+        "range": "0-10 bar",
+        "accuracy": "±0.1%",
+        "output": "4-20mA",
+        "material": "Acero inoxidable 316L"
+      }
+    },
+    {
+      "id": "voith-valve-002",
+      "name": "Válvula de Control VOITH VC-500",
+      "description": "Válvula de control neumática para regulación de flujo en sistemas de automatización industrial",
+      "category": "Automatización",
+      "image": "/images/parts/voith-valve-vc500.jpg",
+      "brand": "VOITH",
+      "price": 3200.00,
+      "stock": 8,
+      "specifications": {
+        "type": "Válvula de control neumática",
+        "size": "DN50",
+        "pressure": "16 bar",
+        "material": "Acero al carbono"
+      }
+    },
+    {
+      "id": "lw-controller-003",
+      "name": "Controlador L&W LC-3000",
+      "description": "Controlador programable para sistemas de control de calidad con interfaz HMI integrada",
+      "category": "Control de calidad",
+      "image": "/images/parts/lw-controller-lc3000.jpg",
+      "brand": "L&W",
+      "price": 8500.00,
+      "stock": 5,
+      "specifications": {
+        "processor": "ARM Cortex-A9",
+        "memory": "512MB RAM",
+        "inputs": "16 digitales, 8 analógicas",
+        "outputs": "12 digitales, 4 analógicas"
+      }
+    },
+    {
+      "id": "eicher-motor-004",
+      "name": "Motor Servo EICHER ES-200",
+      "description": "Motor servo de alta precisión para aplicaciones de posicionamiento en equipos industriales",
+      "category": "Automatización",
+      "image": "/images/parts/eicher-motor-es200.jpg",
+      "brand": "EICHER",
+      "price": 4500.00,
+      "stock": 12,
+      "specifications": {
+        "power": "2kW",
+        "torque": "12 Nm",
+        "speed": "3000 rpm",
+        "encoder": "Resolver 17-bit"
+      }
+    },
+    {
+      "id": "caterpillar-sensor-005",
+      "name": "Sensor de Temperatura CAT T-100",
+      "description": "Sensor de temperatura RTD para monitoreo continuo en procesos industriales críticos",
+      "category": "Medición",
+      "image": "/images/parts/cat-sensor-t100.jpg",
+      "brand": "Caterpillar",
+      "price": 850.00,
+      "stock": 25,
+      "specifications": {
+        "type": "RTD Pt100",
+        "range": "-50°C a +200°C",
+        "accuracy": "±0.1°C",
+        "response": "T90 < 5 segundos"
+      }
+    },
+    {
+      "id": "john-deere-actuator-006",
+      "name": "Actuador Lineal JOHN DEERE AL-400",
+      "description": "Actuador lineal hidráulico para control de posición en equipos pesados industriales",
+      "category": "Automatización",
+      "image": "/images/parts/jd-actuator-al400.jpg",
+      "brand": "John Deere",
+      "price": 2800.00,
+      "stock": 10,
+      "specifications": {
+        "stroke": "400mm",
+        "force": "5000N",
+        "speed": "50mm/s",
+        "pressure": "210 bar"
+      }
+    },
+    {
+      "id": "komatsu-controller-007",
+      "name": "Controlador PLC KOMATSU KC-500",
+      "description": "Controlador lógico programable para automatización de procesos industriales complejos",
+      "category": "Automatización",
+      "image": "/images/parts/komatsu-controller-kc500.jpg",
+      "brand": "Komatsu",
+      "price": 12000.00,
+      "stock": 3,
+      "specifications": {
+        "cpu": "ARM Cortex-M7",
+        "memory": "1MB Flash, 256KB RAM",
+        "io": "32 digitales, 16 analógicas",
+        "communication": "Ethernet, Modbus, Profinet"
+      }
+    },
+    {
+      "id": "kpm-flowmeter-008",
+      "name": "Medidor de Flujo KPM F-300",
+      "description": "Medidor de flujo electromagnético para medición precisa de líquidos conductivos",
+      "category": "Medición",
+      "image": "/images/parts/kpm-flowmeter-f300.jpg",
+      "brand": "KPM",
+      "price": 3500.00,
+      "stock": 7,
+      "specifications": {
+        "type": "Electromagnético",
+        "size": "DN100",
+        "accuracy": "±0.2%",
+        "material": "Acero inoxidable 316L"
+      }
+    },
+    {
+      "id": "voith-analyzer-009",
+      "name": "Analizador de Calidad VOITH AQ-200",
+      "description": "Analizador en línea para control de calidad en procesos de fabricación de papel",
+      "category": "Control de calidad",
+      "image": "/images/parts/voith-analyzer-aq200.jpg",
+      "brand": "VOITH",
+      "price": 25000.00,
+      "stock": 2,
+      "specifications": {
+        "measurements": "Gramaje, humedad, espesor",
+        "accuracy": "±0.5%",
+        "scan_width": "3000mm",
+        "speed": "2000 m/min"
+      }
+    },
+    {
+      "id": "lw-sensor-010",
+      "name": "Sensor de Vibración L&W V-150",
+      "description": "Sensor de vibración para monitoreo de condición de equipos rotativos",
+      "category": "Medición",
+      "image": "/images/parts/lw-sensor-v150.jpg",
+      "brand": "L&W",
+      "price": 1200.00,
+      "stock": 18,
+      "specifications": {
+        "type": "Acelerómetro",
+        "range": "0-100 g",
+        "frequency": "0.5-10000 Hz",
+        "sensitivity": "100 mV/g"
+      }
+    },
+    {
+      "id": "eicher-valve-011",
+      "name": "Válvula Solenoide EICHER SV-25",
+      "description": "Válvula solenoide de 2 vías para control neumático en sistemas automatizados",
+      "category": "Automatización",
+      "image": "/images/parts/eicher-valve-sv25.jpg",
+      "brand": "EICHER",
+      "price": 450.00,
+      "stock": 30,
+      "specifications": {
+        "type": "Solenoide 2/2",
+        "size": "1/4\" NPT",
+        "pressure": "0-10 bar",
+        "voltage": "24V DC"
+      }
+    },
+    {
+      "id": "caterpillar-transmitter-012",
+      "name": "Transmisor de Presión CAT PT-400",
+      "description": "Transmisor de presión diferencial para medición de nivel y flujo en procesos industriales",
+      "category": "Medición",
+      "image": "/images/parts/cat-transmitter-pt400.jpg",
+      "brand": "Caterpillar",
+      "price": 1800.00,
+      "stock": 14,
+      "specifications": {
+        "type": "Presión diferencial",
+        "range": "0-25 kPa",
+        "accuracy": "±0.075%",
+        "output": "4-20mA HART"
+      }
+    },
+    {
+      "id": "kpm-controller-013",
+      "name": "Controlador PID KPM CP-100",
+      "description": "Controlador PID digital para regulación de procesos con comunicación Modbus RTU",
+      "category": "Automatización",
+      "image": "/images/parts/kpm-controller-cp100.jpg",
+      "brand": "KPM",
+      "price": 2200.00,
+      "stock": 12,
+      "specifications": {
+        "type": "Controlador PID",
+        "inputs": "2 analógicas, 4 digitales",
+        "outputs": "2 analógicas, 4 digitales",
+        "communication": "Modbus RTU"
+      }
+    },
+    {
+      "id": "voith-sensor-014",
+      "name": "Sensor de Humedad VOITH HM-300",
+      "description": "Sensor de humedad relativa para control de calidad en procesos de fabricación de papel",
+      "category": "Control de calidad",
+      "image": "/images/parts/voith-sensor-hm300.jpg",
+      "brand": "VOITH",
+      "price": 1500.00,
+      "stock": 20,
+      "specifications": {
+        "type": "Sensor de humedad",
+        "range": "0-100% RH",
+        "accuracy": "±1% RH",
+        "temperature": "-40°C a +85°C"
+      }
+    },
+    {
+      "id": "lw-valve-015",
+      "name": "Válvula de Seguridad L&W SV-800",
+      "description": "Válvula de seguridad de alivio para protección de sistemas hidráulicos industriales",
+      "category": "Automatización",
+      "image": "/images/parts/lw-valve-sv800.jpg",
+      "brand": "L&W",
+      "price": 2800.00,
+      "stock": 6,
+      "specifications": {
+        "type": "Válvula de seguridad",
+        "size": "DN80",
+        "pressure": "25 bar",
+        "material": "Acero inoxidable 316L"
+      }
+    },
+    {
+      "id": "eicher-transmitter-016",
+      "name": "Transmisor de Temperatura EICHER TT-150",
+      "description": "Transmisor de temperatura con termopar tipo K para medición industrial precisa",
+      "category": "Medición",
+      "image": "/images/parts/eicher-transmitter-tt150.jpg",
+      "brand": "EICHER",
+      "price": 950.00,
+      "stock": 25,
+      "specifications": {
+        "type": "Transmisor temperatura",
+        "sensor": "Termopar tipo K",
+        "range": "-200°C a +1372°C",
+        "accuracy": "±0.1°C"
+      }
+    },
+    {
+      "id": "john-deere-controller-017",
+      "name": "Controlador HMI JOHN DEERE HC-2000",
+      "description": "Interfaz hombre-máquina táctil de 10 pulgadas para supervisión y control de procesos",
+      "category": "Automatización",
+      "image": "/images/parts/jd-controller-hc2000.jpg",
+      "brand": "John Deere",
+      "price": 4500.00,
+      "stock": 8,
+      "specifications": {
+        "type": "HMI táctil",
+        "screen": "10.1 pulgadas",
+        "resolution": "1024x600",
+        "communication": "Ethernet, Profinet"
+      }
+    },
+    {
+      "id": "komatsu-sensor-018",
+      "name": "Sensor de Proximidad KOMATSU PR-500",
+      "description": "Sensor de proximidad inductivo para detección de objetos metálicos en equipos industriales",
+      "category": "Medición",
+      "image": "/images/parts/komatsu-sensor-pr500.jpg",
+      "brand": "Komatsu",
+      "price": 180.00,
+      "stock": 50,
+      "specifications": {
+        "type": "Sensor inductivo",
+        "range": "5mm",
+        "voltage": "12-24V DC",
+        "output": "PNP/NPN"
+      }
+    },
+    {
+      "id": "kpm-analyzer-019",
+      "name": "Analizador de Espesor KPM TA-400",
+      "description": "Analizador de espesor por rayos beta para control de calidad en línea de producción",
+      "category": "Control de calidad",
+      "image": "/images/parts/kpm-analyzer-ta400.jpg",
+      "brand": "KPM",
+      "price": 18000.00,
+      "stock": 3,
+      "specifications": {
+        "type": "Analizador beta",
+        "range": "0.1-10mm",
+        "accuracy": "±0.1%",
+        "scan_width": "2000mm"
+      }
+    },
+    {
+      "id": "voith-actuator-020",
+      "name": "Actuador Rotativo VOITH AR-300",
+      "description": "Actuador rotativo neumático para control de válvulas de mariposa en sistemas industriales",
+      "category": "Automatización",
+      "image": "/images/parts/voith-actuator-ar300.jpg",
+      "brand": "VOITH",
+      "price": 3200.00,
+      "stock": 10,
+      "specifications": {
+        "type": "Actuador rotativo",
+        "angle": "90°",
+        "torque": "300 Nm",
+        "pressure": "2-8 bar"
+      }
+    },
+    {
+      "id": "lw-flowmeter-021",
+      "name": "Medidor de Flujo L&W FM-250",
+      "description": "Medidor de flujo ultrasónico para medición no invasiva de líquidos en tuberías",
+      "category": "Medición",
+      "image": "/images/parts/lw-flowmeter-fm250.jpg",
+      "brand": "L&W",
+      "price": 4200.00,
+      "stock": 7,
+      "specifications": {
+        "type": "Ultrasónico",
+        "size": "DN25-DN200",
+        "accuracy": "±1%",
+        "material": "Acero inoxidable"
+      }
+    },
+    {
+      "id": "eicher-valve-022",
+      "name": "Válvula de Mariposa EICHER BF-150",
+      "description": "Válvula de mariposa de acero inoxidable para control de flujo en sistemas hidráulicos",
+      "category": "Automatización",
+      "image": "/images/parts/eicher-valve-bf150.jpg",
+      "brand": "EICHER",
+      "price": 1200.00,
+      "stock": 15,
+      "specifications": {
+        "type": "Válvula mariposa",
+        "size": "DN150",
+        "pressure": "16 bar",
+        "material": "Acero inoxidable 316L"
+      }
+    },
+    {
+      "id": "caterpillar-controller-023",
+      "name": "Controlador de Motor CAT MC-500",
+      "description": "Controlador de velocidad variable para motores de inducción en aplicaciones industriales",
+      "category": "Automatización",
+      "image": "/images/parts/cat-controller-mc500.jpg",
+      "brand": "Caterpillar",
+      "price": 5500.00,
+      "stock": 6,
+      "specifications": {
+        "type": "Variador de frecuencia",
+        "power": "5.5kW",
+        "voltage": "380-480V AC",
+        "frequency": "0-400Hz"
+      }
+    },
+    {
+      "id": "john-deere-sensor-024",
+      "name": "Sensor de Nivel JOHN DEERE NL-600",
+      "description": "Sensor de nivel por ultrasonido para medición continua en tanques y silos industriales",
+      "category": "Medición",
+      "image": "/images/parts/jd-sensor-nl600.jpg",
+      "brand": "John Deere",
+      "price": 2800.00,
+      "stock": 12,
+      "specifications": {
+        "type": "Ultrasónico",
+        "range": "0.3-15m",
+        "accuracy": "±3mm",
+        "temperature": "-40°C a +80°C"
+      }
+    },
+    {
+      "id": "komatsu-analyzer-025",
+      "name": "Analizador de Densidad KOMATSU DA-300",
+      "description": "Analizador de densidad por radiación gamma para control de calidad en procesos industriales",
+      "category": "Control de calidad",
+      "image": "/images/parts/komatsu-analyzer-da300.jpg",
+      "brand": "Komatsu",
+      "price": 22000.00,
+      "stock": 2,
+      "specifications": {
+        "type": "Radiación gamma",
+        "range": "0.1-3.0 g/cm³",
+        "accuracy": "±0.5%",
+        "source": "Cs-137"
+      }
+    },
+    {
+      "id": "kpm-valve-026",
+      "name": "Válvula de Retención KPM CV-100",
+      "description": "Válvula de retención de clapeta para prevenir retroflujo en sistemas de bombeo",
+      "category": "Automatización",
+      "image": "/images/parts/kpm-valve-cv100.jpg",
+      "brand": "KPM",
+      "price": 450.00,
+      "stock": 30,
+      "specifications": {
+        "type": "Válvula retención",
+        "size": "DN100",
+        "pressure": "16 bar",
+        "material": "Hierro fundido"
+      }
+    },
+    {
+      "id": "voith-transmitter-027",
+      "name": "Transmisor de pH VOITH PH-200",
+      "description": "Transmisor de pH digital con compensación automática de temperatura para procesos químicos",
+      "category": "Medición",
+      "image": "/images/parts/voith-transmitter-ph200.jpg",
+      "brand": "VOITH",
+      "price": 1800.00,
+      "stock": 18,
+      "specifications": {
+        "type": "Transmisor pH",
+        "range": "0-14 pH",
+        "accuracy": "±0.02 pH",
+        "temperature": "0-80°C"
+      }
+    },
+    {
+      "id": "lw-controller-028",
+      "name": "Controlador de Presión L&W PC-400",
+      "description": "Controlador de presión digital con display LCD y comunicación HART para regulación precisa",
+      "category": "Automatización",
+      "image": "/images/parts/lw-controller-pc400.jpg",
+      "brand": "L&W",
+      "price": 1600.00,
+      "stock": 14,
+      "specifications": {
+        "type": "Controlador presión",
+        "range": "0-100 bar",
+        "accuracy": "±0.1%",
+        "display": "LCD 4 dígitos"
+      }
+    },
+    {
+      "id": "eicher-sensor-029",
+      "name": "Sensor de Velocidad EICHER VS-250",
+      "description": "Sensor de velocidad por efecto Hall para medición de RPM en equipos rotativos industriales",
+      "category": "Medición",
+      "image": "/images/parts/eicher-sensor-vs250.jpg",
+      "brand": "EICHER",
+      "price": 320.00,
+      "stock": 40,
+      "specifications": {
+        "type": "Sensor Hall",
+        "range": "0-10000 RPM",
+        "accuracy": "±0.1%",
+        "voltage": "12-24V DC"
+      }
+    },
+    {
+      "id": "caterpillar-valve-030",
+      "name": "Válvula de Compuerta CAT GV-200",
+      "description": "Válvula de compuerta de acero al carbono para control de flujo en sistemas de alta presión",
+      "category": "Automatización",
+      "image": "/images/parts/cat-valve-gv200.jpg",
+      "brand": "Caterpillar",
+      "price": 2800.00,
+      "stock": 9,
+      "specifications": {
+        "type": "Válvula compuerta",
+        "size": "DN200",
+        "pressure": "25 bar",
+        "material": "Acero al carbono"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "automatizacion",
+      "name": "Automatización",
+      "description": "Componentes para sistemas de automatización industrial",
+      "brands": ["KPM", "VOITH", "L&W", "EICHER", "Caterpillar", "John Deere", "Komatsu"]
+    },
+    {
+      "id": "medicion",
+      "name": "Medición",
+      "description": "Instrumentos de medición y sensores industriales",
+      "brands": ["KPM", "VOITH", "L&W", "EICHER", "Caterpillar", "John Deere", "Komatsu"]
+    },
+    {
+      "id": "control-calidad",
+      "name": "Control de calidad",
+      "description": "Equipos para control y análisis de calidad en procesos industriales",
+      "brands": ["KPM", "VOITH", "L&W", "EICHER", "Caterpillar", "John Deere", "Komatsu"]
+    }
+  ],
+  "brands": [
+    {
+      "id": "kpm",
+      "name": "KPM",
+      "description": "Especialista en sistemas de medición y control para la industria papelera",
+      "logo": "/images/brands/kpm-logo.png"
+    },
+    {
+      "id": "voith",
+      "name": "VOITH",
+      "description": "Líder mundial en tecnología para la industria papelera y de celulosa",
+      "logo": "/images/brands/voith-logo.png"
+    },
+    {
+      "id": "lw",
+      "name": "L&W",
+      "description": "Expertos en equipos de control de calidad y medición",
+      "logo": "/images/brands/lw-logo.png"
+    },
+    {
+      "id": "eicher",
+      "name": "EICHER",
+      "description": "Fabricante de componentes de automatización de alta precisión",
+      "logo": "/images/brands/eicher-logo.png"
+    },
+    {
+      "id": "caterpillar",
+      "name": "Caterpillar",
+      "description": "Proveedor de equipos industriales y componentes de control",
+      "logo": "/images/brands/caterpillar-logo.png"
+    },
+    {
+      "id": "john-deere",
+      "name": "John Deere",
+      "description": "Especialista en sistemas hidráulicos y de automatización",
+      "logo": "/images/brands/john-deere-logo.png"
+    },
+    {
+      "id": "komatsu",
+      "name": "Komatsu",
+      "description": "Fabricante de equipos industriales y sistemas de control",
+      "logo": "/images/brands/komatsu-logo.png"
+    }
+  ]
+}

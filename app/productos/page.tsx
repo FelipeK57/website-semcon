@@ -95,7 +95,7 @@ export default function Productos() {
 
             <div className="flex flex-col lg:flex-row gap-8">
                 {/* Filtros laterales */}
-                <section className="lg:max-w-sm w-full h-fit space-y-6 lg:sticky lg:top-20">
+                <section className="lg:max-w-sm w-full h-fit space-y-6 lg:sticky lg:top-20 lg:max-h-[calc(100vh-8rem)] lg:overflow-auto">
                     {/* Búsqueda */}
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Buscar</h3>

@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import useQuoteStore from "@/lib/store";
-import { ShoppingCart, Trash2, Plus, Minus, Package, DollarSign, Send, Check } from "lucide-react";
+import { ShoppingCart, Trash2, Plus, Minus, Package, DollarSign, Send, Check, LoaderCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function Cotizacion() {
@@ -22,14 +22,26 @@ export default function Cotizacion() {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const [formData, setFormData] = useState({
-        nombre: "",
-        empresa: "",
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [error, setError] = useState({
+        name: "",
+        company: "",
         email: "",
-        telefono: "",
-        mensaje: "",
-        urgencia: "normal"
+        phone: "",
+        message: "",
     });
+
+    const [formData, setFormData] = useState({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+    });
+
+    const errorFieldStyle = "text-destructive border-destructive";
+    const errorLabelStyle = "text-destructive";
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -37,14 +49,8 @@ export default function Cotizacion() {
             ...prev,
             [name]: value
         }));
-    };
-
-    const handleSelectChange = (value: string) => {
-        setFormData(prev => ({
-            ...prev,
-            urgencia: value
-        }));
-    };
+        setError({ ...error, [name]: "" });
+    }
 
     const handleQuantityChange = (partId: string, newQuantity: number) => {
         if (newQuantity <= 0) {
@@ -63,10 +69,43 @@ export default function Cotizacion() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        setIsLoading(true);
+        const newError = {
+            name: "",
+            company: "",
+            email: "",
+            phone: "",
+            message: "",
+        };
+
+        if (formData.name.trim() === "") {
+            newError.name = "El nombre es requerido";
+        }
+        if (formData.company.trim() === "") {
+            newError.company = "La empresa es requerida";
+        }
+        if (formData.email.trim() === "") {
+            newError.email = "El email es requerido";
+        } else if (!formData.email.includes("@")) {
+            newError.email = "El email no es válido, debe contener un @";
+        }
+        if (formData.phone.trim() === "") {
+            newError.phone = "El teléfono es requerido";
+        }
+        if (formData.message.trim() === "") {
+            newError.message = "El mensaje es requerido";
+        }
+        if (Object.values(newError).some((value) => value !== "")) {
+            setIsLoading(false);
+            setError(newError);
+            console.log(newError);
+            return;
+        }
         // Aquí se enviaría la cotización
         console.log("Cotización enviada:", { formData, shoppingCart });
         clearParts();
         setIsSubmitted(true);
+        setIsLoading(false);
     };
 
     if (isSubmitted) {
@@ -76,12 +115,12 @@ export default function Cotizacion() {
                 <p className="text-muted-foreground">Gestione sus solicitudes de cotización de forma sencilla y eficiente.</p>
                 <section className="flex flex-col items-center justify-center py-28 gap-4">
                     <Check className="size-24 text-green-600" />
-                    <h2 className="text-2xl font-bold">Solicitud de cotización enviada</h2>
-                    <p className="text-muted-foreground">
+                    <h2 className="text-2xl font-bold text-center">Solicitud de cotización enviada</h2>
+                    <p className="text-muted-foreground text-center">
                         Nos pondremos en contacto contigo lo antes posible.
                     </p>
                     <Link href="/productos">
-                        <Button>Ver catálogo</Button>
+                        <Button>Volver al catálogo</Button>
                     </Link>
                 </section>
             </main>
@@ -191,7 +230,7 @@ export default function Cotizacion() {
                 </section>
 
                 {/* Formulario de contacto - Lado derecho */}
-                <section className="lg:w-1/3 w-full h-fit lg:sticky lg:top-20">
+                <section className="lg:w-1/3 w-full h-fit lg:sticky lg:top-20 lg:max-h-[calc(100vh-8rem)] lg:overflow-auto">
                     <Card>
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
@@ -205,66 +244,88 @@ export default function Cotizacion() {
                         <CardContent>
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div className="space-y-2">
-                                    <Label htmlFor="nombre">Nombre completo *</Label>
+                                    <Label htmlFor="name" className={error.name ? errorLabelStyle : ""}>Nombre completo</Label>
                                     <Input
-                                        id="nombre"
-                                        name="nombre"
-                                        value={formData.nombre}
+                                        id="name"
+                                        name="name"
+                                        value={formData.name}
                                         onChange={handleInputChange}
-                                        placeholder="Su nombre completo"
-                                        required
+                                        placeholder="Nombre"
+                                        className={error.name ? errorFieldStyle : ""}
                                     />
+                                    {error.name && (
+                                        <p className="text-destructive text-xs">{error.name}</p>
+                                    )}
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label htmlFor="empresa">Empresa</Label>
+                                    <Label htmlFor="company" className={error.company ? errorLabelStyle : ""}>Empresa</Label>
                                     <Input
-                                        id="empresa"
-                                        name="empresa"
-                                        value={formData.empresa}
+                                        id="company"
+                                        name="company"
+                                        value={formData.company}
                                         onChange={handleInputChange}
-                                        placeholder="Nombre de su empresa"
+                                        placeholder="Empresa"
+                                        className={error.company ? errorFieldStyle : ""}
                                     />
+                                    {error.company && (
+                                        <p className="text-destructive text-xs">{error.company}</p>
+                                    )}
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label htmlFor="email">Correo electrónico *</Label>
+                                    <Label htmlFor="email" className={error.email ? errorLabelStyle : ""}>Correo electrónico</Label>
                                     <Input
                                         id="email"
                                         name="email"
-                                        type="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        placeholder="su@email.com"
-                                        required
+                                        placeholder="Correo electrónico"
+                                        className={error.email ? errorFieldStyle : ""}
                                     />
+                                    {error.email && (
+                                        <p className="text-destructive text-xs">{error.email}</p>
+                                    )}
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label htmlFor="telefono">Teléfono</Label>
+                                    <Label htmlFor="phone" className={error.phone ? errorLabelStyle : ""}>Teléfono</Label>
                                     <Input
-                                        id="telefono"
-                                        name="telefono"
-                                        value={formData.telefono}
+                                        id="phone"
+                                        name="phone"
+                                        value={formData.phone}
                                         onChange={handleInputChange}
-                                        placeholder="+1 (555) 123-4567"
+                                        placeholder="Teléfono"
+                                        className={error.phone ? errorFieldStyle : ""}
                                     />
+                                    {error.phone && (
+                                        <p className="text-destructive text-xs">{error.phone}</p>
+                                    )}
                                 </div>
                                 <div className="space-y-2">
-                                    <Label htmlFor="mensaje">Mensaje adicional</Label>
+                                    <Label htmlFor="message" className={error.message ? errorLabelStyle : ""}>Mensaje adicional</Label>
                                     <Textarea
-                                        id="mensaje"
-                                        name="mensaje"
-                                        value={formData.mensaje}
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
                                         onChange={handleInputChange}
-                                        placeholder="Especifique requisitos especiales, fechas de entrega, condiciones de pago, etc."
+                                        placeholder="Escribe tu mensaje aquí."
                                         rows={4}
+                                        className={error.message ? errorFieldStyle : ""}
                                     />
+                                    {error.message && (
+                                        <p className="text-destructive text-xs">{error.message}</p>
+                                    )}
                                 </div>
 
-                                <Button type="submit" className="w-full" size="lg">
-                                    <Send className="h-4 w-4 mr-2" />
-                                    Enviar cotización
+                                <Button type="submit" className={`${isLoading ? "bg-muted text-muted-foreground cursor-not-allowed" : "bg-primary hover:bg-primary/90"} transition-all w-full`} size="lg" disabled={isLoading}>
+                                    {isLoading
+                                        ? <LoaderCircle className="size-4 animate-spin" />
+                                        : <>
+                                            <Send className="h-4 w-4 mr-2" />
+                                            Enviar cotización
+                                        </>
+                                    }
                                 </Button>
                             </form>
                         </CardContent>

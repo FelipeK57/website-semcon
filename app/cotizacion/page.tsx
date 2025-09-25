@@ -173,23 +173,30 @@ export default function Cotizacion() {
 
                     <div className="space-y-4">
                         {shoppingCart.map((item) => (
-                            <Card key={item.part.id} className="flex flex-col">
-                                <CardHeader className="flex-1">
+                            <div key={item.part.id} className="flex flex-row gap-4 border rounded-lg p-4">
+                                <div className="w-24 aspect-square bg-accent rounded-lg border hidden md:block"></div>
+                                <div className="flex-1">
                                     <div className="flex justify-between items-start">
                                         <div className="space-y-1">
                                             <Badge variant="outline">{item.part.category}</Badge>
-                                            <CardTitle className="text-lg">{item.part.name}</CardTitle>
-                                            <CardDescription>
+                                            <CardTitle className="text-base lg:text-lg">{item.part.name}</CardTitle>
+                                            <CardDescription className="text-sm lg:text-base">
                                                 {item.part.brand} • {item.part.category}
                                             </CardDescription>
                                         </div>
                                     </div>
-                                </CardHeader>
+                                </div>
 
-                                <CardContent className="flex flex-col gap-4">
-                                    <div className="flex-1">
-                                        <p className="text-sm text-muted-foreground mb-2 max-w-lg">{item.part.description}</p>
-                                    </div>
+                                <div className="flex flex-col items-end justify-between gap-4">
+                                    {/* Botón eliminar */}
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={() => removePart(item.part.id)}
+                                        className="text-red-600 hover:text-red-700 w-fit"
+                                    >
+                                        <Trash2 className="h-4 w-4" />
+                                    </Button>
                                     <div className="flex items-center gap-4 justify-end">
                                         {/* Controles de cantidad */}
                                         <div className="flex items-center gap-2">
@@ -212,19 +219,9 @@ export default function Cotizacion() {
                                                 <Plus className="h-4 w-4" />
                                             </Button>
                                         </div>
-
-                                        {/* Botón eliminar */}
-                                        <Button
-                                            variant="outline"
-                                            size="sm"
-                                            onClick={() => removePart(item.part.id)}
-                                            className="text-red-600 hover:text-red-700"
-                                        >
-                                            <Trash2 className="h-4 w-4" />
-                                        </Button>
                                     </div>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </section>

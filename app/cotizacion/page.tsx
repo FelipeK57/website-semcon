@@ -318,7 +318,7 @@ export default function Cotizacion() {
                                     )}
                                 </div>
 
-                                <Button type="submit" className={`${isLoading ? "bg-muted text-muted-foreground cursor-not-allowed" : "bg-primary hover:bg-primary/90"} transition-all w-full`} size="lg" disabled={isLoading}>
+                                <Button type="submit" className={`${isLoading ? "bg-muted text-muted-foreground cursor-not-allowed" : "bg-primary hover:bg-primary/90"} transition-all w-full cursor-pointer`} size="lg" disabled={isLoading}>
                                     {isLoading
                                         ? <LoaderCircle className="size-4 animate-spin" />
                                         : <>

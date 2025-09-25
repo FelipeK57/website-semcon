@@ -57,7 +57,7 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-30 bg-background border-b">
+        <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="fixed top-0 left-0 right-0 z-30 bg-background border-b">
             <div className="flex justify-between items-center p-4 max-w-6xl w-full mx-auto">
                 {/* <h1 className="text-xl italic text-primary font-extrabold">SEMCON</h1> */}
                 <Image src="/Logo.png" alt="SEMCON" width={100} height={20} />
@@ -108,7 +108,7 @@ export default function Navbar() {
                                 ))}
                                 <div className="relative w-fit">
                                     <Link href="/cotizacion" onClick={() => setIsOpen(false)}>
-                                        <Button size="lg">
+                                        <Button size="lg" >
                                             <ShoppingCart />
                                             Cotización
                                         </Button>
@@ -124,6 +124,6 @@ export default function Navbar() {
                     )}
                 </AnimatePresence>
             </div>
-        </nav>
+        </motion.nav>
     );
 }

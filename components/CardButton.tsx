@@ -12,7 +12,7 @@ export default function CardButton() {
 
     return <div className="fixed right-4 bottom-4 z-10 lg:hidden">
         <Link href="/cotizacion">
-            <Button size="lg">
+            <Button className="cursor-pointer" size="lg">
                 <ShoppingCart />
                 Cotización
             </Button>

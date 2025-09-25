@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Award, Clock, Phone, Settings, ShieldCheck, Users2, Wrench, Zap } from "lucide-react";
+import Link from "next/link";
 
 export default function Servicios() {
     return (
@@ -134,7 +135,7 @@ export default function Servicios() {
             <section className="flex flex-col gap-4 px-8 py-24 items-center justify-center bg-accent">
                 <h2 className="text-2xl font-bold text-accent-foreground text-center">¿Necesita Servicios Especializados?</h2>
                 <p className="text-center text-base max-w-3xl text-accent-foreground">Contacte con nuestros especialistas para una evaluación gratuita de sus necesidades de mantenimiento y servicios técnicos.</p>
-                <Button size="lg">Contactar especialista</Button>
+                <Link href="/contacto"><Button size="lg" className="cursor-pointer">Contactar especialista</Button></Link>
             </section>
         </main>
     )

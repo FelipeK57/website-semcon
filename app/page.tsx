@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -12,19 +14,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-svh">
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 pt-20 sm:gap-16 md:gap-24 min-h-svh max-w-6xl mx-auto">
-        <article className="flex flex-col h-fit w-fit m-auto gap-6">
+        <motion.article initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="flex flex-col h-fit w-fit m-auto gap-6">
           <h1 className="text-4xl font-bold max-w-lg">Soluciones de <span className="text-primary">automatización</span> y <span className="text-primary">control</span> para la industria papelera</h1>
           <p className="text-sm lg:text-base max-w-lg text-muted-foreground">En SEMCON integramos ingeniería, servicios técnicos especializados y venta de equipos con respaldo internacional. Más de dos décadas acompañando a las principales empresas papeleras de Colombia en su camino hacia la eficiencia, confiabilidad y sostenibilidad.</p>
           <div className="flex flex-col md:flex-row gap-4">
-            <Button size="lg">Solicitar servicios</Button>
-            <Button size="lg" variant="outline">Cotizar equipos</Button>
+            <Link href="/contacto" className="w-full md:w-fit">
+              <Button className="cursor-pointer w-full md:w-fit" size="lg">Solicitar servicios</Button>
+            </Link>
+            <Link href="/productos" className="w-full md:w-fit">
+              <Button className="cursor-pointer w-full md:w-fit" size="lg" variant="outline">Cotizar equipos</Button>
+            </Link>
           </div>
-        </article>
+        </motion.article>
         {/* <Image src="/hero.png" alt="Hero" className="bg-accent object-cover rounded-lg w-full border aspect-square m-auto" width={1000} height={1000}>
         </Image> */}
         <div className="bg-accent rounded-lg w-full border aspect-square m-auto"></div>
@@ -42,12 +50,12 @@ export default function Home() {
               Mantenemos tus equipos en óptimas condiciones para garantizar la eficiencia y confiabilidad de tu proceso productivo.
             </p>
           </article>
-          <div className="bg-accent rounded-lg w-full border aspect-square">
-          </div>
+          <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 100 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-accent rounded-lg w-full border aspect-square">
+          </motion.div>
         </div>
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-4 md:gap-24">
-          <div className="bg-accent rounded-lg w-full border aspect-square">
-          </div>
+          <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -100 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-accent rounded-lg w-full border aspect-square">
+          </motion.div>
           <article className="flex flex-col justify-center gap-4">
             <h3 className="text-2xl font-semibold">Instalación y soporte técnico</h3>
             <p className="text-sm lg:text-base max-w-lg text-muted-foreground">
@@ -66,8 +74,12 @@ export default function Home() {
         </div>
         {/* <div className="absolute bottom-20 left-0 w-full h-80 bg-gradient-to-t from-70% from-background to-transparent"></div> */}
         <div className="flex flex-col md:flex-row gap-4">
-          <Button variant="link" size="lg">Ver más</Button>
-          <Button size="lg">Solicitar servicios</Button>
+          <Link href="/servicios" className="w-full md:w-fit">
+            <Button variant="link" size="lg" className="w-full md:w-fit cursor-pointer">Ver más</Button>
+          </Link>
+          <Link href="/contacto" className="w-full md:w-fit">
+            <Button size="lg" className="w-full md:w-fit cursor-pointer">Solicitar servicios</Button>
+          </Link>
         </div>
       </section>
       <section className="flex flex-col items-center gap-6 p-8">
@@ -112,8 +124,12 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
         <div className="flex flex-col md:flex-row gap-4">
-          <Button variant="link" size="lg">Ver más</Button>
-          <Button size="lg">Cotizar equipos</Button>
+          <Link href="/productos" className="w-full md:w-fit">
+            <Button variant="link" size="lg" className="w-full md:w-fit cursor-pointer">Ver más</Button>
+          </Link>
+          <Link href="/cotizacion" className="w-full md:w-fit">
+            <Button size="lg" className="w-full md:w-fit cursor-pointer">Cotizar equipos</Button>
+          </Link>
         </div>
       </section>
       <section className="flex flex-col items-center gap-6 p-8 bg-accent">
@@ -225,7 +241,9 @@ export default function Home() {
       <section className="flex flex-col gap-4 px-8 py-24 items-center justify-center bg-accent">
         <h2 className="text-2xl font-bold text-accent-foreground text-center">¿Listo para optimizar tu proceso?</h2>
         <p className="text-center text-base max-w-3xl text-accent-foreground">Contáctanos hoy mismo y descubre cómo nuestras soluciones de automatización y control pueden transformar tu industria papelera. Nuestro equipo de expertos está listo para acompañarte.</p>
-        <Button size="lg">Contactar</Button>
+        <Link href="/contacto" className="w-full md:w-fit">
+          <Button size="lg" className="w-full md:w-fit cursor-pointer">Contactar</Button>
+        </Link>
       </section>
     </main>
   );

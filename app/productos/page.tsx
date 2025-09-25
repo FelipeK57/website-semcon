@@ -93,9 +93,9 @@ export default function Productos() {
                 </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-8">
                 {/* Filtros laterales */}
-                <section className="lg:max-w-sm w-full h-fit space-y-6 lg:sticky lg:top-20 lg:max-h-[calc(100vh-8rem)] lg:overflow-auto">
+                <section className="md:max-w-xs w-full h-fit space-y-6 md:sticky md:top-20 md:max-h-[calc(100vh-8rem)] md:overflow-auto">
                     {/* Búsqueda */}
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Buscar</h3>
@@ -127,7 +127,7 @@ export default function Productos() {
                                     </Badge>
                                 )}
                             </div>
-                            <Button variant="outline" size="sm" onClick={clearFilters}>
+                            <Button variant="outline" className="cursor-pointer" size="sm" onClick={clearFilters}>
                                 Limpiar filtros
                             </Button>
                         </div>
@@ -191,43 +191,39 @@ export default function Productos() {
                             </p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {filteredParts.map((part) => (
-                                <Card key={part.id} className="flex flex-col">
-                                    <CardHeader>
+                                <Card key={part.id} className="flex flex-col py-3 gap-2">
+                                    <CardHeader className="flex-1 px-3">
                                         <div className="flex justify-between items-start">
-                                            <div className="space-y-1">
-                                                <Badge variant="outline">{part.category}</Badge>
-                                                <CardTitle className="text-lg">{part.name}</CardTitle>
-                                                <CardDescription className="text-sm">
-                                                    {part.brand} • {part.category}
+                                            <div className="space-y-2 w-full">
+                                                <div className="relative">
+                                                    <Badge variant="outline" className="absolute top-2 left-2 bg-background">{part.category}</Badge>
+                                                    <div className="w-full aspect-square border rounded-lg bg-accent"></div>
+                                                </div>
+                                                <CardTitle className="text-base ml-1">{part.name}</CardTitle>
+                                                <CardDescription className="text-xs ml-1">
+                                                    {part.brand}
                                                 </CardDescription>
                                             </div>
                                         </div>
                                     </CardHeader>
-
-                                    <CardContent className="flex-1">
-                                        <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                                            {part.description}
-                                        </p>
-                                    </CardContent>
-
-                                    <CardFooter className="flex flex-col gap-2">
+                                    <CardFooter className="flex flex-col space-y-2 px-3">
                                         <Button
-                                            className="w-full"
+                                            className="w-full cursor-pointer"
                                             onClick={() => handleAddToCart(part)}
                                             disabled={part.stock === 0 || isPartInCart(part.id)}
                                             variant={isPartInCart(part.id) ? "secondary" : "default"}
                                         >
                                             <ShoppingCart className="h-4 w-4 mr-2" />
-                                            {part.stock === 0 
-                                                ? "Sin stock" 
-                                                : isPartInCart(part.id) 
-                                                    ? "Ya en cotización" 
-                                                    : "Agregar a cotización"
+                                            {part.stock === 0
+                                                ? "Sin stock"
+                                                : isPartInCart(part.id)
+                                                    ? "En cotización"
+                                                    : "Cotizar"
                                             }
                                         </Button>
-                                        <Button variant="outline" className="w-full">
+                                        <Button variant="outline" className="w-full cursor-pointer">
                                             Ver detalles
                                         </Button>
                                     </CardFooter>

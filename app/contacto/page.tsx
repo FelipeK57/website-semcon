@@ -71,7 +71,6 @@ export default function Contacto() {
       return;
     }
 
-    console.log("submit");
     setIsLoading(true);
     const newError = {
       name: "",
@@ -156,34 +155,13 @@ export default function Contacto() {
               ? 'bg-yellow-50 border-yellow-200'
               : 'bg-blue-50 border-blue-200'
           }`}>
-          <div className="flex items-start gap-3">
-            <div className={`w-2 h-2 rounded-full mt-2 ${friendlyStatus.type === 'blocked'
-              ? 'bg-amber-400'
-              : friendlyStatus.type === 'limit_reached'
-                ? 'bg-green-400'
-                : friendlyStatus.type === 'warning'
-                  ? 'bg-yellow-400'
-                  : 'bg-blue-400'
-              }`}></div>
-            <div className="flex-1">
-              <p className={`text-sm ${friendlyStatus.type === 'blocked'
-                ? 'text-amber-800'
-                : friendlyStatus.type === 'limit_reached'
-                  ? 'text-green-800'
-                  : friendlyStatus.type === 'warning'
-                    ? 'text-yellow-800'
-                    : 'text-blue-800'
-                }`}>
-                {friendlyStatus.message}
-              </p>
-              {friendlyStatus.timeRemaining > 0 && (
-                <p className={`text-sm font-medium mt-1 ${friendlyStatus.type === 'blocked' ? 'text-amber-700' : 'text-blue-700'
-                  }`}>
-                  {formatTimeRemaining(friendlyStatus.timeRemaining)}
-                </p>
-              )}
-            </div>
-          </div>
+          <p className="text-sm font-medium text-amber-700">{friendlyStatus.message}</p>
+          {friendlyStatus.timeRemaining > 0 && (
+            <p className={`text-sm font-medium mt-1 ${friendlyStatus.type === 'blocked' ? 'text-amber-700' : 'text-blue-700'
+              }`}>
+              {formatTimeRemaining(friendlyStatus.timeRemaining)}
+            </p>
+          )}
         </div>
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -255,7 +233,7 @@ export default function Contacto() {
         {isLoading
           ? <LoaderCircle className="size-4 animate-spin" />
           : !canSendMessage
-            ? "Espera un momento..."
+            ? "Intenta luego"
             : "Enviar mensaje"
         }
       </Button>

@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import partsDatabase from "./parts-database.json";
 
-interface Part {
+export interface Part {
   id: string;
   name: string;
   description: string;
@@ -10,8 +10,6 @@ interface Part {
   image: string;
   brand?: string;
   price?: number;
-  stock?: number;
-  specifications?: Record<string, any>;
 }
 
 interface QuotePart {

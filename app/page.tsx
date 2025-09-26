@@ -70,7 +70,7 @@ export default function Home() {
               Capacitamos a tu equipo para que pueda operar y mantener tus equipos de manera eficiente.
             </p>
           </article>
-          <div className="bg-accent rounded-lg w-full border aspect-square"></div>
+          <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: 100 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-accent rounded-lg w-full border aspect-square"></motion.div>
         </div>
         {/* <div className="absolute bottom-20 left-0 w-full h-80 bg-gradient-to-t from-70% from-background to-transparent"></div> */}
         <div className="flex flex-col md:flex-row gap-4">

@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Package, DollarSign, Zap } from "lucide-react";
 import useQuoteStore from "@/lib/store";
+import Link from "next/link";
 
 interface Part {
     id: string;
@@ -212,20 +213,19 @@ export default function Productos() {
                                         <Button
                                             className="w-full cursor-pointer"
                                             onClick={() => handleAddToCart(part)}
-                                            disabled={part.stock === 0 || isPartInCart(part.id)}
+                                            disabled={isPartInCart(part.id)}
                                             variant={isPartInCart(part.id) ? "secondary" : "default"}
                                         >
                                             <ShoppingCart className="h-4 w-4 mr-2" />
-                                            {part.stock === 0
-                                                ? "Sin stock"
-                                                : isPartInCart(part.id)
-                                                    ? "En cotización"
-                                                    : "Cotizar"
+                                            {isPartInCart(part.id)
+                                                ? "En cotización"
+                                                : "Cotizar"
                                             }
                                         </Button>
-                                        <Button variant="outline" className="w-full cursor-pointer">
+                                        <Link href={`/productos/${part.id}`} className="w-full"><Button variant="outline" className="w-full cursor-pointer">
                                             Ver detalles
                                         </Button>
+                                        </Link>
                                     </CardFooter>
                                 </Card>
                             ))}

@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { useRateLimit } from "@/hooks/useRateLimit";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { LoaderCircle } from "lucide-react";
+import { toast } from "sonner"
 
 export default function Contacto() {
   const {
@@ -110,11 +111,15 @@ export default function Contacto() {
 
     // Record the message in rate limit
     recordMessage();
-
-    setInterval(() => {
-      setIsLoading(false);
-    }, 3000);
-    console.log(formData);
+    toast.success("Mensaje enviado correctamente", {
+      action: {
+        label: "Cerrar",
+        onClick: () => {
+          toast.dismiss();
+        }
+      }
+    });
+    setIsLoading(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

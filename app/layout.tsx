@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 import CardButton from "@/components/CardButton";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <CardButton />
+        <Toaster position="top-center" />
       </body>
     </html>
   );

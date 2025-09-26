@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import useQuoteStore from "@/lib/store";
 import { ShoppingCart, Trash2, Plus, Minus, Package, DollarSign, Send, Check, LoaderCircle } from "lucide-react";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function Cotizacion() {
     const {
@@ -103,6 +104,14 @@ export default function Cotizacion() {
         }
         // Aquí se enviaría la cotización
         console.log("Cotización enviada:", { formData, shoppingCart });
+        toast.success("Cotización enviada correctamente", {
+            action: {
+                label: "Cerrar",
+                onClick: () => {
+                    toast.dismiss();
+                }
+            }
+        });
         clearParts();
         setIsSubmitted(true);
         setIsLoading(false);
